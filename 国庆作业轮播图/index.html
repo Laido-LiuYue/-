@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>轮播图效果的实现</title>
+        <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .wrap{
+            width: 1200px;
+            height:397px;
+            position: relative;
+            margin:30px auto;
+            overflow: hidden;
+        }
+        .wrap a{
+            display: none;
+        }
+        .bottom{
+            width: 1002px;
+            height: 73px;
+            bottom:0;
+            left:99px;
+            position:absolute;
+            margin-top: 600px;
+            margin-left:0px;
+            background-image: url(./images/3.png);
+        }
+        .bottom>span{
+            display: block;
+            width: 50px;
+            height: 73px;
+            line-height: 73px;
+            text-align: center;
+            color:#fff;
+            cursor:pointer;
+            font-size:25px;
+        }
+        #next{
+            float: right;
+        }
+        #pre{
+            float:left;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <a href="#" style="display:block;"><img src="images/banner_00.gif" ></a>
+            <a href="#"><img src="images/banner_01.jpg"></a>
+            <a href="#"><img src="images/banner_02.jpg"></a>
+            <a href="#"><img src="images/banner_03.jpg"></a>
+            <a href="#"><img src="images/banner_04.jpg"></a>		
+            <a href="#"><img src="images/banner_05.jpg"></a>
+            <div class="bottom">
+                <span id="pre"><</span>
+                <span id="next">></span>
+            </div>
+        </div> 
+    </body>
+    <script>
+    var wrap = document.getElementsByClassName('wrap')[0];
+	var imgs = wrap.getElementsByTagName('a');
+	var i = 0;
+	function imgTab(){
+		imgs[i%6].style.display = 'none';
+		i++;
+		imgs[i%6].style.display = 'block';
+	}
+	var timer = setInterval(imgTab,1000);
+	wrap.onmouseover = function(){
+		clearInterval(timer);
+	}
+	wrap.onmouseout = function(){
+		timer = setInterval(imgTab,1000);
+	}
+	pre.onclick = function(){
+		imgs[i%6].style.display = 'none';
+		i--;
+		if(i<0){
+			i=5;
+		}
+		imgs[i%6].style.display = 'block';
+	}
+	next.onclick = function(){
+		imgTab();
+	}
+    </script>
+</html>

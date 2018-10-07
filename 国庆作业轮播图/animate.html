@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>国庆作业animate函数</title>
+        <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            left: 0;
+        }
+        </style>
+        <script>
+            var box = document.getElementById('box');
+            function getStyle(obj,attr){
+                if(obj.currentStyle){
+                    return obj.currentStyle[attr];
+                }else{
+                    return getComputedStyle(obj,null)[attr];
+                }
+            }
+            function animate(obj,json,callback){
+                clearInterval(obj.timer);
+                obj.timer = setInterval(function(){
+                    console.log(1);
+                    var isStop = true;
+                    for(var attr in json){
+                        var now = 0;
+                        if(attr == 'opacity'){
+                            now = parseInt(getStyle(obj,attr)*100);
+                        }else{
+                            now = parseInt(getStyle(obj,attr));
+                        }
+                       
+                        var speed = (json[attr] - now)/6;
+                        speed = speed>0?Math.ceil(speed):Math.floor(speed);
+                        var current = now + speed;
+                        if(attr == 'opacity'){
+                            obj.style.opacity = current/100;
+                        }else{
+                            obj.style[attr] = current + "px";
+                        }
+                        if(json[attr] !== current){
+                            isStop = false;
+                        }
+                   }
+                   if(isStop){
+                       clearInterval(obj.timer);
+                       callback&&callback();
+                   }
+                },30)
+            }
+            //调用animate函数
+            animate(box,{left:300,top:500,opacity:20},function(){
+                console.log(1);
+            });
+        </script>
+    </head>
+    <body>
+        <div id="box">
+        </div>
+    </body>
+</html>
