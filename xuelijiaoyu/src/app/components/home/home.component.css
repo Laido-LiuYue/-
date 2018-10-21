@@ -1,0 +1,40 @@
+.nav{
+    height: 500px;
+    width: 200px;
+    margin-left:160px;
+    margin-top: 20px;
+}
+.photo>img{
+    margin-left: 15px;
+}
+p{
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+}
+.attention{
+    display:  inline-block;
+    width: 100px;
+    height: 50px;
+    text-align:center;
+}
+.fans{
+    display: inline-block ;
+    width: 100px;
+    height: 50px;
+    text-align:center;
+}
+.list li{
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 5px;
+    background-color: #f7f7f7;
+}
+.list li a{
+    padding: 8px 50px;
+    color: black;
+}
+.list li a:hover{
+    text-decoration:none; 
+    background:#ffece6;
+}

@@ -1,0 +1,44 @@
+.nav{
+    height: 50px;
+}
+.course{
+    margin-top:35px;;
+    margin-left: 40px;
+    color: #ff6e3f;
+} 
+.content ul li{
+    height: 160px;
+}
+.search{
+    float: right;
+    position: relative;
+    bottom: 25px;
+    margin-right: 25px;
+}
+.search img{
+    position: relative;
+    top: 23px;
+}
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+}
+h4{
+    position: relative;
+    bottom: 135px;
+    left: 250px;
+}
+.bottom{
+    position: relative;
+    bottom: 60px;
+    left: 250px;
+    color: gray;
+}
+#people{
+    margin-left: 20px;
+}
+hr{
+    position: relative;
+}

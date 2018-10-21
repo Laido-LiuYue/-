@@ -1,0 +1,42 @@
+.content{
+    height: 500px;
+    width: 1000px;
+    margin: 20px auto;
+}
+select{
+    height: 35px;
+    width: 100px;
+}
+li{
+    width: 235px;
+    height: 260px;
+    float: left;
+    margin-left: 6px;
+    margin-top: 20px;
+    border: 1px solid gainsboro;
+    overflow: hidden;
+}
+#content{
+    height: 60px;
+    overflow: hidden;
+    color: gray;
+}
+#name{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 10px;
+}
+span{
+    color: gray;
+    margin-left: 10px;
+}
+#person{
+    float: right;
+}
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+}

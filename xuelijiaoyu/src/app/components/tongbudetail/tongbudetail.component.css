@@ -1,0 +1,35 @@
+.container{
+    height: 1000px;
+    width: 1000px;
+}
+.na{
+    height: 100px;
+    background-color: #fafbfc;
+}
+.img{
+    margin-top: 15px;
+}
+h4{
+    position: relative;
+    bottom: 30px;
+    left: 30px;
+    
+}
+.list li{
+    float: left;
+    margin-left: 30px;
+}
+a{
+    color: black;
+    font-size: 15px;
+    font-weight: lighter;
+}
+a:hover{
+    text-decoration: none;
+}
+button{
+    height: 30px;
+    width: 100px;
+    background-color: #ff6e3f;
+    margin-top: 20px;
+}

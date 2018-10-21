@@ -1,0 +1,72 @@
+.content{
+    /* height: 1000px; */
+    width: 1000px;
+    margin: 20px auto;
+}
+.content li{
+    height: 180px;
+    width: 800px;
+}
+.photo img{
+    border-radius: 50%;
+    position: relative;
+    bottom: 15px;
+}
+#img img{
+    border: 1px solid gainsboro;
+    margin-left: 20px;
+}
+#note{
+    position: relative; 
+    bottom: 30px;
+    left: 30px;
+}
+h4{
+    position:relative;
+    bottom: 90px;
+    left: 240px;
+}
+p{
+    height: 60px;
+    width: 600px;
+    position:relative;
+    bottom: 90px;
+    left: 200px;
+    line-height: 20px;
+    color: gray;
+}
+.bottom{
+    color: gray;
+    position:relative;
+    bottom: 90px;
+}
+#person{
+    margin-left: 70px;
+    margin-right: 20px;
+}
+#read{
+    margin-left: 450px;
+}
+hr{
+    position:relative;
+    bottom: 90px;
+}
+a{
+    color: black;
+}
+a:hover,a:active,a:visited{
+    text-decoration: none;
+}
+.ht{
+    position: relative;
+    bottom:700px;
+    margin-right: 50px;
+    line-height: 30px;
+    width: 300px;
+    float: right;
+}
+.ht span{
+    float: right;
+    position: relative;
+    bottom: 25px;
+}

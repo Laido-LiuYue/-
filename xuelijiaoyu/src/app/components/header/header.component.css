@@ -1,0 +1,85 @@
+nav{
+    height: 50px;
+    background-color: #f7f7f7;
+}
+.nav{
+    width: 1000px;
+    margin: 0 auto;
+}
+.img{
+    width: 132px;
+    line-height: 50px;
+}
+.list{
+    margin: 0 350px;
+    line-height: 50px;
+    position: absolute;
+    top: 1px;
+}
+.list li{
+    float: left;
+    margin: 0 10px;
+    line-height: 50px;
+    cursor: pointer;
+}
+.list li a{
+    padding: 15px 10px;
+    color: black;
+}
+.list li a:hover{
+    text-decoration:none; 
+    background:#b6b4b4;
+}
+.input{
+    margin-left:  550px;
+}
+.input input{
+    height: 30px;
+}
+.search{
+    height: 30px;
+    width: 30px;
+    display:inline-block;
+    border:1px solid #b6b4b4;
+    background-color: #f7f7f7;
+}
+.search a:hover{
+    padding: 6px 1px;
+    background-color:   #b6b4b4;
+}
+
+.con{
+    position: absolute;
+    margin: 0 50px;
+    line-height: 50px;
+}
+.con ul{
+    list-style:none;
+    position: relative;
+}
+.con ul li{
+    height: 50px;
+    width: 60px;
+    float:left;
+}
+.con ul a:hover{
+    padding: 15px 5px;
+    background-color: #b6b4b4;
+}
+
+.con ul li ul li{
+    width: 70px;
+    height: 40px;
+    background-color: #f7f7f7;
+}
+.con li ul li a:hover{
+    color: #FFF;
+    text-decoration: none;
+    background-color: #b6b4b4;
+}
+.con li ul{
+    display:none;
+}
+.con li.subMenuShow ul{
+    display:block;
+}

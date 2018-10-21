@@ -1,0 +1,27 @@
+<div class="home">
+    <div class="nav">
+        <div  class="course">我加入的</div>
+        <span class="search">
+            <span class="input"><a><input type="text" placeholder="搜索课程、问答"></a></span>
+            <span class="search"><a><img src="assets/image/quicksearchbox.png"></a></span>
+        </span>  
+    </div>
+    <hr>
+    <div class="content">
+        <ul>
+          <li *ngFor='let course of course;'>
+            <a [routerLink]="['/tongbu',course.id]">
+                <img src="{{course.images}}">
+                <h4>{{course.courseName}}</h4>
+                <div class="bottom">
+                  <span><img src="assets/image/task.png"></span>
+                  <span>{{course.task}}</span>
+                  <span id="people"><img src="assets/image/people.png"></span>
+                  <span>{{course.person}}</span>
+                </div>
+            </a>
+            <hr>
+          </li>
+        </ul>
+    </div>
+</div>

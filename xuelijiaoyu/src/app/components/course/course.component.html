@@ -1,0 +1,38 @@
+<div class="content">
+  <select name="kind">
+    <option value="k">课程分类</option>
+    <option value="k1">一级分类</option>
+    <option value="k2">WEB前端开发</option>
+    <option value="k3">WEB后端开发</option>
+    <option value="k4">移动应用开发</option>
+    <option value="k5">软件测试</option>
+    <option value="k6">数据库</option>
+    <option value="k7">基础知识&实用工具</option>
+    <option value="k8">网络&操作系统</option>    
+    <option value="k9">软件设计&系统架构</option>
+    <option value="k0">产品设计</option>
+  </select>
+  <select name="tixi">
+    <option value="t">课程体系</option>
+    <option value="t1">计算机基础技能</option>
+    <option value="t2">Web前端工程师</option>
+    <option value="t3">Android开发工程师</option>
+    <option value="t4">MySQL数据库工程师</option>
+    <option value="t5">产品设计</option>
+    <option value="t6">软件测试工程师</option>
+    <option value="t7">全部体系</option>
+  </select>
+  <ul>
+    <li *ngFor='let courseTong of course;'>
+      <a [routerLink]="['/courseTong',courseTong.id]">
+          <img src="{{courseTong.images}}">
+          <p id="name">{{courseTong.courseName}}</p>
+          <p id="content">&nbsp;&nbsp;{{courseTong.content}}</p>
+          <div class="bottom">
+            <span>课时{{courseTong.classNum}}</span>
+            <span id="person">人数{{courseTong.person}}</span>
+          </div>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,15 @@
+.nav{
+    height: 50px;
+}
+.nav ul li{
+    float: left;
+    margin-top:35px;;
+    margin-left: 40px;
+} 
+#tj a{
+    color: #ff6e3f;
+}
+a{
+    font-size: 15px;
+    color: black;
+}

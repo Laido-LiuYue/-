@@ -1,0 +1,28 @@
+.container{
+    clear: both;
+}
+.container li{
+    width: 235px;
+    height: 210px;
+    float: left;
+    margin-left: 4px;
+    margin-top: 20px;
+    border: 1px solid gainsboro;
+}
+.bottom{
+    margin-top: 10px;
+}
+button{
+    background-color: #ff6e3f;
+    float: right;
+    font-size: 13px;
+}
+span{
+    margin-left: 10px;
+}
+a{
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+}
