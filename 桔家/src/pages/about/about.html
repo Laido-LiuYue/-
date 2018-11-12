@@ -1,0 +1,65 @@
+<ion-header text-center no-border>
+    <ion-navbar color="yel">
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>
+        桔家
+      </ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content>
+  <!---导航栏-->
+    <ul class="navList">
+      <li>推荐</li>
+      <li class="first">家居</li>
+      <li>餐厨</li>
+      <li>床上用品</li>
+    </ul>
+    <!-- (ionSlideDidChange)="change()" -->
+  <ion-slides  pager="true" autoplay="1000" loop="true" class="sli">
+      <ion-slide>
+        <img src="assets/imgs/slide1.png" alt="">
+      </ion-slide>
+      <ion-slide>
+        <img src="assets/imgs/slide2.png" alt="">
+      </ion-slide>
+  </ion-slides>
+  
+  <div class="type">
+    <img src="assets/imgs/jiaju1.png" alt="">
+    <img src="assets/imgs/jiaju2.png" alt="">
+    <img src="assets/imgs/jiaju3.png" alt="">
+  </div>
+  <div class="subtitle">
+    <img src="assets/imgs/tuijian2.png" alt="">
+  </div>
+  <ul class="goods">
+      <li>
+        <img src="assets/imgs/jiaju4.png" alt="">
+        <p>欧式全实木花几  RMB600</p>
+        <span><ion-icon name="md-star-half"></ion-icon></span>
+      </li>
+      <li>
+        <img src="assets/imgs/jiaju5.png" alt="">
+        <p>现代简约早餐桌  RMB450</p>
+        <span><ion-icon name="md-star-half"></ion-icon></span>
+      </li>
+      <!-- <li>
+        <img src="assets/imgs/jiaju6.png" alt="">
+        <p>*****</p>
+        <span><ion-icon name="md-star-half"></ion-icon></span>
+      </li>
+      <li>
+        <img src="assets/imgs/jiaju7.png" alt="">
+        <p>*****</p>
+        <span><ion-icon name="md-star-half"></ion-icon></span>
+      </li>    -->
+  </ul>
+</ion-content>
