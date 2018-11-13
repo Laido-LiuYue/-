@@ -7,10 +7,6 @@ page-home {
         .first{
             border-bottom:2px solid #ffdb2c;
         }
-        .goSub{
-            background-color: #fff;
-            font-size: 14px;
-        }
         li{
             height: 44px;
             text-align: center;
@@ -26,6 +22,19 @@ page-home {
     }
     .subtitle{
         letter-spacing: 5px;
+        margin-top: 5px;
+        img{
+            width: 100%;
+        }
+    }
+    .type{
+        margin: 0px;
+        padding: 0px;
+        margin-top: 10px;
+        img{
+            width:30%;
+            margin-left:7px;
+        }
     }
     .goods{
         padding: 0;

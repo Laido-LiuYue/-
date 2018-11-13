@@ -1,6 +1,6 @@
 import { Component  } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { AboutPage } from '../about/about';
+// import { AboutPage } from '../about/about';
 
 // ViewChild
 @Component({
@@ -11,13 +11,15 @@ export class HomePage {
   // @ViewChild('ac') ac;
   icons:string="camera";
   items = [];
-
+  isActive = 0;
+  isClick(i){
+    this.isActive=i;
+  }
+  arr=['推荐','家居','餐厨','床上用品'];
   constructor(public navCtrl: NavController) {
     
   }
-  goSub(){
-    this.navCtrl.push(AboutPage);
-  }
+  
   
   ionViewDidLoad(){
     // 调用组件的方法，和@ViewChild连用

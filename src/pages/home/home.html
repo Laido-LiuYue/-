@@ -19,12 +19,13 @@
 
   <!-- 导航栏 -->
   <ul class="navList">
-    <li class="first">推荐</li>
-    <li><button (click)="goSub()" class="goSub">家居</button></li>
-    <li>餐厨</li>
-    <li>床上用品</li>
+    <li *ngFor='let item of arr;let idx=index;' (click)="isClick(idx)" 
+    [class.first]="isActive==idx" class="first">{{arr[idx]}}</li>
+    <!-- <li (click)="isClick(1)" [class.first]="isActive">家居</li>
+    <li (click)="isClick(2)" [class.first]="isActive">餐厨</li>
+    <li (click)="isClick(3)" [class.first]="isActive">床上用品</li> -->
   </ul>
-  <!-- 轮播 -->
+   <!-- 轮播 -->
   <ion-slides pager="true" autoplay="1000" loop="true" class="sli">
     <ion-slide>
       <img src="assets/imgs/slide1.png" alt="">
@@ -36,20 +37,22 @@
       <img src="assets/imgs/slide1.png" alt="">
     </ion-slide> -->
   </ion-slides>
-  <div class="subtitle">
-    <img src="assets/imgs/tuijian1.png" alt="" style="margin-top:5px;">
-      <!-- <h3 text-center>热|门|推|荐</h3>
-      <p text-center>RECOMMENDATION</p> -->
-  </div>
-  <!-- 商品列表没用grid，改用普通li了，大家看看怎么写 -->
-  <ul class="goods">
+  <div [ngSwitch]="isActive">
+    <div *ngSwitchCase="0">
+      <div class="subtitle">
+        <img src="assets/imgs/tuijian1.png" alt="" style="margin-top:5px;">
+          <!-- <h3 text-center>热|门|推|荐</h3>
+          <p text-center>RECOMMENDATION</p> -->
+      </div>
+      <!-- 商品列表没用grid，改用普通li了，大家看看怎么写 -->
+      <ul class="goods">
         <li>
           <img src="assets/imgs/img1.png" alt="">
           <p>——北欧原木色置物架——</p>
           <span><ion-icon name="md-star-half"></ion-icon></span>
         </li>
         <li>
-          <img src="assets/imgs/img2.png" alt="">
+        <img src="assets/imgs/img2.png" alt="">
           <p>——简约黑檀木茶几——</p>
           <span><ion-icon name="md-star-half"></ion-icon></span>
         </li>
@@ -73,8 +76,39 @@
           <p>——简约黄梨木置物柜—— </p>
           <span><ion-icon name="md-star-half"></ion-icon></span>
         </li>
-        
-    </ul>
+      </ul>
+    </div>
+    <div *ngSwitchCase="1">
+      <div class="type">
+        <img src="assets/imgs/jiaju1.png" alt="">
+        <img src="assets/imgs/jiaju2.png" alt="">
+        <img src="assets/imgs/jiaju3.png" alt="">
+      </div>
+      <div class="subtitle">
+        <img src="assets/imgs/tuijian2.png" alt="">
+      </div>
+      <ul class="goods">
+          <li>
+            <img src="assets/imgs/jiaju4.png" alt="">
+            <p>欧式全实木花几  RMB600</p>
+            <span><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+          <li>
+            <img src="assets/imgs/jiaju5.png" alt="">
+            <p>现代简约早餐桌  RMB450</p>
+            <span><ion-icon name="md-star-half"></ion-icon></span>
+          </li>
+      </ul>
+    </div>
+    <div *ngSwitchCase="2">
+      canchu
+    </div>
+    <div *ngSwitchCase="3">
+      chuangshangyongpin
+    </div>
+  </div>
+ 
+  
   <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
     <ion-refresher-content></ion-refresher-content>
   </ion-refresher> -->

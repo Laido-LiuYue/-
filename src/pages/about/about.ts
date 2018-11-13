@@ -7,7 +7,12 @@ import { HomePage } from '../home/home';
 })
 export class AboutPage {
   tab1Root = HomePage;
-  @ViewChild(Slides) slides:Slides;
+  // @ViewChild(Slides) slides:Slides;
+  isActive = 0;
+  isClick(i){
+    this.isActive=i;
+  }
+  arr=['客厅','卧室','餐厅','书房','门厅'];
   constructor(public navCtrl: NavController) {
   }
   ionViewDidLoad(){
